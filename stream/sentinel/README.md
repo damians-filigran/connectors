@@ -1,5 +1,14 @@
 # OpenCTI Sentinel Connector
-This OpenCTI connector allows the ability to create or delete data from your OpenCTI platform to either the Microsoft Sentinel or Microsoft Defender for Endpoint platform utitlizing the [Microsofot Graph API Threat Intelligence Indicator](https://learn.microsoft.com/en-us/graph/api/resources/tiindicator?view=graph-rest-beta). Microsoft has a detailed guide on how to get started with connecting your threat intelligence platform to Sentinel found [here](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/data/sentinel-threat-intelligence#import-threat-indicators-with-the-platforms-data-connector).
+This OpenCTI connector allows the ability to create or delete data from your OpenCTI platform to either the Microsoft Sentinel or Microsoft Defender for Endpoint platform utitlizing the [Microsoft Graph API Threat Intelligence Indicator](https://learn.microsoft.com/en-us/graph/api/resources/tiindicator?view=graph-rest-beta).
+
+Microsoft has a detailed guide on how to get started with connecting your threat intelligence platform to Sentinel, found [here](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/data/sentinel-threat-intelligence#import-threat-indicators-with-the-platforms-data-connector).
+
+Follow the Microsoft configuration steps carefully, noting that you will need to:
+- [Register it as an application with Microsoft EntraID](https://learn.microsoft.com/en-us/azure/sentinel/connect-threat-intelligence-tip)
+- Add permission for *ThreatIndicators.ReadWrite.OwnedBy* to the app, for sending threat intelligence
+- Add permission for *SecurityIncident.Read.All* to the app, for receiving incidents from Sentinel to create in OpenCTI
+
+
 
 ## Installation
 
